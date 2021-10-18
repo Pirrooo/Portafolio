@@ -7,11 +7,13 @@ import { PrimerComponenteComponent } from './primer-componente/primer-componente
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatButtonModule} from '@angular/material/button';
+import { CurriculumComponent } from './curriculum/curriculum.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PrimerComponenteComponent
+    PrimerComponenteComponent,
+    CurriculumComponent
   ],
   imports: [
     RouterModule.forRoot(APP_ROUTES),

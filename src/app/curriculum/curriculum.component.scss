@@ -1,0 +1,246 @@
+@font-face {
+    font-family: "Bauhaus";
+    src: url("../../assets/BauhausRegular.ttf") format("truetype");
+}
+
+#texto-Personal {
+    //background-color: white;
+   // width: 850px;
+    text-align: justify;
+    margin-top: 70px;
+    display: inline-block;
+    //			-webkit-box-shadow: 5px 5px 30px 10px #999;
+    //box-shadow: 5px 5px 30px 10px #999;
+} 
+
+#presentacion {
+    display: inline-block;
+    width: 250px;
+    height: 350px;
+    text-align: center;
+    background-color: #05899d;
+    color: white;
+}
+.h3{
+    font-family: 'Bauhaus' !important;
+    font-size: 30px !important;
+}
+
+#foto {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 200px;
+    margin-left: 20px;
+    // background-size: auto; 
+    overflow: hidden;
+    // display: flex; 
+    // background-repeat: no-repeat;
+    background-position: 50%; 
+    border-radius: 50%;
+    // background-size: 100% auto; 
+}
+
+#imagen {
+    position: relative;
+    bottom: 25px;
+    width: 100%;
+    // height: 200px; 
+    // background-size: contain; 
+    background-position: 0 0, bottom left; 
+}
+
+#contacto {
+    color: #05899d;
+    display: inline-block;
+    width: 500px;
+   // height: 290px;
+    position: relative;
+    top: -100px;
+    left: 45px;
+
+    .cuadro{
+        display: inline;
+    }
+    
+    .img {
+        width: 30px;
+        margin-top: 15px;
+        margin-right: 12px;
+        display: inline;
+    }
+    
+    #github {
+        width: 43px;
+        margin-left: -5px;
+        margin-right: 7px;
+    }
+    
+    #link {
+        margin-left: -5px;
+    }
+    
+    .contactoCol {
+        height: 70px;
+        font-size: 18px;
+        display: inline-block;
+    }
+    
+    #Direccion,
+    #telefono {
+        width: 150px;
+    }
+    
+    .tit {
+        margin-top: -10px;
+        margin-bottom: 0;
+    }
+}
+
+
+#importante {
+    display: inline-block;
+    width: 500px;
+    height: 700px;
+    position: relative;
+    left: 30px;
+    top: -150px;
+
+    .col {
+        margin-top: 20px;
+    }
+
+    .icono {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        color: #05899d;
+    }
+
+    .grande {
+        margin-top: 5px;
+        height: 1px;
+        background-color: #05899d;
+
+    }
+
+    .contenedor {
+        position: static;
+        display: inline-block;
+    }
+
+    .flecha {
+        width: 80px;
+        height: 20px;
+        position: relative;
+        background: #05899d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+
+    .flecha:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border-left: 11px solid white;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+    }
+
+    .flecha:before {
+        content: "";
+        position: absolute;
+        right: -10px;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border-left: 10px solid #05899d;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+    }
+
+    .circle {
+        width: 10px;
+        height: 10px;
+        background: black;
+        border-radius: 50%
+    }
+
+    .h6 {
+        display: inline-block;
+        margin-left: 20px;
+        margin-top: 10px;
+        font-weight: bold;
+        color: #05899d;
+    }
+}
+
+
+
+.complementaria {
+    margin-top: 10px;
+    color: #05899d;
+}
+
+p {
+    display: inline-block;
+    margin-left: 105px;
+    margin-bottom: 0;
+    position: static;
+}
+
+#complementario {
+    background-color: #05899d;
+    color: white;
+    display: inline-block;
+    width: 250px;
+    height: 900px;
+    text-align: left;
+    position: relative;
+    top: -405px;
+}
+
+.continfo {
+    margin-left: 10px;
+    margin-top: 40px;
+    width: 245px;
+}
+
+.titulos {
+    font-size: 18;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+hr {
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: white;
+    height: 0px;
+}
+
+P {
+    margin-left: 0px;
+    //		margin-bottom: 5px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.contestacion {
+    float: right;
+    width: 130px;
+    text-align: left;
+}
+
+#inscrito {
+    position: relative;
+    top: 50px;
+    left: 7px;
+    text-align: justify;
+    padding-right: 15px;
+}
