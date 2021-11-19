@@ -8,12 +8,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatButtonModule} from '@angular/material/button';
 import { CurriculumComponent } from './curriculum/curriculum.component';
+import { ObjetosCSSComponent } from './objetos-css/objetos-css.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PrimerComponenteComponent,
-    CurriculumComponent
+    CurriculumComponent,
+    ObjetosCSSComponent
   ],
   imports: [
     RouterModule.forRoot(APP_ROUTES),
