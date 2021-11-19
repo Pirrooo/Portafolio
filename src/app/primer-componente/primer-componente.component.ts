@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./primer-componente.component.scss']
 })
 export class PrimerComponenteComponent implements OnInit {
-
+ seleccion
   constructor() { }
 
   ngOnInit(): void {
+    this.seleccion = 'Perretes'
   }
 
 }

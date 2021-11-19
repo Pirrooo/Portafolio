@@ -2,10 +2,16 @@
     <mat-drawer #drawer class="example-sidenav" mode="side">
         <a class="algo" [routerLink]="['/']">Inicio</a>
         <br>
-        <a class="algo" [routerLink]="['/PrimerComponente']">Tarjetas variadas</a>
-        <br>
         <a class="algo" [routerLink]="['/ObjetosCSS']">Objetos CSS</a>
         <br>
+        <td>Tarjetas
+            <select name="select">
+                <option class="algo" [routerLink]="['/PrimerComponente']">Perretes</option>
+                <option value="value2" selected>Value 2</option>
+                <option value="value3">Value 3</option>
+              </select>
+        </td>
+        
         <a class="algo" [routerLink]="['/Curriculum']">Curriculum Vitae</a>
     </mat-drawer>
 
