@@ -5,11 +5,13 @@
         <a class="algo" [routerLink]="['/ObjetosCSS']">Objetos CSS</a>
         <br>
         <td>Tarjetas
-            <select name="select">
-                <option class="algo" [routerLink]="['/PrimerComponente']">Perretes</option>
-                <option value="value2" selected>Value 2</option>
-                <option value="value3">Value 3</option>
-              </select>
+
+            <ul class="lista" name="select">
+                <li (click)="refresh('Perretes')"><a class="algo" [routerLink]="['/Primer', 'Perretes']">Perretes</a></li>
+                <li (click)="refresh('Guardamar')"><a class="algo" [routerLink]="['/Primer', 'Guardamar']">Guardamar</a></li>
+                <li value="value2" selected>Value 2</li>
+                <li value="value3">Value 3</li>
+            </ul>
         </td>
         
         <a class="algo" [routerLink]="['/Curriculum']">Curriculum Vitae</a>

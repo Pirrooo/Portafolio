@@ -5,7 +5,7 @@ import { CurriculumComponent } from './curriculum/curriculum.component';
 import { ObjetosCSSComponent } from './objetos-css/objetos-css.component';
 
 export const APP_ROUTES: Route[] = [
-    {path: 'PrimerComponente', component: PrimerComponenteComponent},
+    {path: 'Primer/:page', component: PrimerComponenteComponent},
     {path: 'Curriculum', component: CurriculumComponent},
     {path: 'ObjetosCSS', component: ObjetosCSSComponent}
 ]

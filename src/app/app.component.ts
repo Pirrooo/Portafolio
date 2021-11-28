@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ɵɵqueryRefresh } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -8,6 +9,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'PortafolioSegundo';
-  var = 'carta';
   showFiller = false;
+
+  constructor(private router: Router) { }
+
+  refresh(comando:string){
+    let com = "/Primer/"+comando+"";
+    this.router.navigateByUrl("", { skipLocationChange: true }).then(() => {
+      this.router.navigate([''+com+'']);
+  }); 
+ // console.log(com);
+  //  window.location.reload();
+  }
+
+  
+
 }
+
+
