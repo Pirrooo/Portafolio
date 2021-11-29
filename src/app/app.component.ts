@@ -1,5 +1,9 @@
 import { Component, ɵɵqueryRefresh } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import {MatTreeModule} from '@angular/material/tree'; 
+import { MatDrawer } from '@angular/material/sidenav';
+import {FlatTreeControl} from '@angular/cdk/tree';
+import {MatTreeFlatDataSource, MatTreeFlattener} from '@angular/material/tree';
 
 
 @Component({
@@ -14,12 +18,20 @@ export class AppComponent {
   constructor(private router: Router) { }
 
   refresh(comando:string){
-    let com = "/Primer/"+comando+"";
     this.router.navigateByUrl("", { skipLocationChange: true }).then(() => {
-      this.router.navigate([''+com+'']);
+      this.router.navigate([''+comando+'']);
   }); 
  // console.log(com);
   //  window.location.reload();
+  }
+
+  aleatorio(comando:string){
+    let primer =['Perretes', 'Guardamar'];
+    let elige = comando  + (primer[Math.round((Math.random()))]);
+    this.router.navigateByUrl("", { skipLocationChange: true }).then(() => {
+      this.router.navigate([''+elige+'']);
+  }); 
+  console.log(elige);
   }
 
   

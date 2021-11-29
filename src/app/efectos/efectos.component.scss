@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.portrait{
+    position:absolute;
+    top:0;
+    left:25%;
+    bottom:0;
+    right:0;
+    height:100vh;
+    width:839px;
+}
+.portrait img{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: top;
+}
+#yo{
+    object-fit: none;
+}
+.portrait img.texture{
+    mix-blend-mode: multiply;
+    filter: contrast(1);
+}

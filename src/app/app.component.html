@@ -1,29 +1,28 @@
 <mat-drawer-container class="example-container" autosize>
-    <mat-drawer #drawer class="example-sidenav" mode="side">
-        <a class="algo" [routerLink]="['/']">Inicio</a>
-        <br>
-        <a class="algo" [routerLink]="['/ObjetosCSS']">Objetos CSS</a>
-        <br>
-        <td>Tarjetas
+<mat-drawer #drawer class="example-sidenav" mode="side">
+    <a class="algo" [routerLink]="['/']">Inicio</a>
+    <br>
+        <ul class="lista" name="select">Objetos CSS
+            <li (click)="refresh('/ObjetosCSS/Taza')">Taza</li>
+        </ul>
 
-            <ul class="lista" name="select">
-                <li (click)="refresh('Perretes')"><a class="algo" [routerLink]="['/Primer', 'Perretes']">Perretes</a></li>
-                <li (click)="refresh('Guardamar')"><a class="algo" [routerLink]="['/Primer', 'Guardamar']">Guardamar</a></li>
-                <li value="value2" selected>Value 2</li>
-                <li value="value3">Value 3</li>
-            </ul>
-        </td>
-        
-        <a class="algo" [routerLink]="['/Curriculum']">Curriculum Vitae</a>
-    </mat-drawer>
+        <ul class="lista" name="select"><p (click)="aleatorio('/Primer/')">Tarjetas</p>
+            <li (click)="refresh('/Primer/Perretes')">Perretes</li>
+            <li (click)="refresh('/Primer/Guardamar')">Guardamar</li>
+        </ul>
+        <ul class="lista" name="select">Efectos Varios
+            <li (click)="refresh('/Efectos/Roto')">Grietas</li>
+        </ul>
+    <a class="algo" [routerLink]="['/Curriculum']">Curriculum Vitae</a>
+</mat-drawer>
 
-    <button class="BotonMenu" mat-flat-button (click)="drawer.toggle()">
-        <img class="imagenMenu" src="../assets/menu.png">
-        Menú</button>
-
-    <router-outlet></router-outlet>
-      
-  </mat-drawer-container>
+<button class="BotonMenu" mat-flat-button (click)="drawer.toggle()">
+    <img class="imagenMenu" src="../assets/menu.png">
+    Menú</button>
+            
+<router-outlet></router-outlet>
+    
+</mat-drawer-container>
   
   
 
