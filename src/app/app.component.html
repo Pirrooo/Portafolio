@@ -1,19 +1,39 @@
 <mat-drawer-container class="example-container" autosize>
 <mat-drawer #drawer class="example-sidenav" mode="side">
-    <a class="algo" [routerLink]="['/']">Inicio</a>
-    <br>
-        <ul class="lista" name="select">Objetos CSS
-            <li (click)="refresh('/ObjetosCSS/Taza')">Taza</li>
-        </ul>
 
-        <ul class="lista" name="select"><p (click)="aleatorio('/Primer/')">Tarjetas</p>
-            <li (click)="refresh('/Primer/Perretes')">Perretes</li>
-            <li (click)="refresh('/Primer/Guardamar')">Guardamar</li>
-        </ul>
-        <ul class="lista" name="select">Efectos Varios
-            <li (click)="refresh('/Efectos/Roto')">Grietas</li>
-        </ul>
-    <a class="algo" [routerLink]="['/Curriculum']">Curriculum Vitae</a>
+    <button mat-button class="algo" [routerLink]="['/']">Inicio</button>
+    
+    <mat-accordion>
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              ObjetosCSS
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p (click)="refresh('/ObjetosCSS/Taza')">Taza</p>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title (click)="aleatorio('/Primer/')">
+                Tarjetas
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p (click)="refresh('/Primer/Perretes')">Perretes</p>
+            <p (click)="refresh('/Primer/Guardamar')">Guardamar</p>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Efectos varios
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p (click)="refresh('/Efectos/Roto')">Grietas</p>
+          </mat-expansion-panel>
+      </mat-accordion>
+
+      <button mat-button class="algo" [routerLink]="['/Curriculum']">Curriculum Vitae</button>
 </mat-drawer>
 
 <button class="BotonMenu" mat-flat-button (click)="drawer.toggle()">

@@ -10,6 +10,11 @@ import {MatButtonModule} from '@angular/material/button';
 import { CurriculumComponent } from './curriculum/curriculum.component';
 import { ObjetosCSSComponent } from './objetos-css/objetos-css.component';
 import {MatTreeModule} from '@angular/material/tree';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatNativeDateModule} from '@angular/material/core';
+import {HttpClientModule} from '@angular/common/http';
+import {MatIconModule} from '@angular/material/icon'; 
+import {MatExpansionModule} from '@angular/material/expansion'; 
 
 @NgModule({
   declarations: [
@@ -26,7 +31,15 @@ import {MatTreeModule} from '@angular/material/tree';
     MatButtonModule,
     BrowserAnimationsModule,
     BrowserModule,
-    MatTreeModule
+    MatTreeModule,
+    BrowserAnimationsModule,
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
+    MatIconModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,13 +5,13 @@ import { MatDrawer } from '@angular/material/sidenav';
 import {FlatTreeControl} from '@angular/cdk/tree';
 import {MatTreeFlatDataSource, MatTreeFlattener} from '@angular/material/tree';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  panelOpenState = false;
   title = 'PortafolioSegundo';
   showFiller = false;
 
@@ -31,7 +31,7 @@ export class AppComponent {
     this.router.navigateByUrl("", { skipLocationChange: true }).then(() => {
       this.router.navigate([''+elige+'']);
   }); 
-  console.log(elige);
+  console.log(this.showFiller);
   }
 
   
