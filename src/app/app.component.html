@@ -1,8 +1,8 @@
 <mat-drawer-container class="example-container" autosize>
 <mat-drawer #drawer class="example-sidenav" mode="side">
 
-    <button mat-button class="algo" [routerLink]="['/']">Inicio</button>
-    
+    <button mat-stroked-button class="NoEscala" [routerLink]="['/']">Inicio</button>
+    <br>
     <mat-accordion>
         <mat-expansion-panel hideToggle>
           <mat-expansion-panel-header>
@@ -32,8 +32,8 @@
             <p (click)="refresh('/Efectos/Roto')">Grietas</p>
           </mat-expansion-panel>
       </mat-accordion>
-
-      <button mat-button class="algo" [routerLink]="['/Curriculum']">Curriculum Vitae</button>
+      <br>
+      <button mat-stroked-button class="NoEscala" [routerLink]="['/Curriculum']">Curriculum Vitae</button>
 </mat-drawer>
 
 <button class="BotonMenu" mat-flat-button (click)="drawer.toggle()">
