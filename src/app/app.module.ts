@@ -14,7 +14,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatNativeDateModule} from '@angular/material/core';
 import {HttpClientModule} from '@angular/common/http';
 import {MatIconModule} from '@angular/material/icon'; 
-import {MatExpansionModule} from '@angular/material/expansion'; 
+import {MatExpansionModule} from '@angular/material/expansion';
+import { ScrollComponent } from './scroll/scroll.component'; 
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     PrimerComponenteComponent,
     CurriculumComponent,
     ObjetosCSSComponent,
+    ScrollComponent,
   ],
   imports: [
     RouterModule.forRoot(APP_ROUTES),
