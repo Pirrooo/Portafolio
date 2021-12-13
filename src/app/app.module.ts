@@ -3,45 +3,49 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { APP_ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
-import { PrimerComponenteComponent } from './tarjetas/primer-componente.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { CurriculumComponent } from './curriculum/curriculum.component';
-import { ObjetosCSSComponent } from './objetos-css/objetos-css.component';
-import {MatTreeModule} from '@angular/material/tree';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatNativeDateModule} from '@angular/material/core';
-import {HttpClientModule} from '@angular/common/http';
-import {MatIconModule} from '@angular/material/icon'; 
-import {MatExpansionModule} from '@angular/material/expansion';
-import { ScrollComponent } from './scroll/scroll.component'; 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatNativeDateModule } from '@angular/material/core';
+import { HttpClientModule } from '@angular/common/http';
+import { MatIconModule } from '@angular/material/icon';
+import { HistoriaComponent } from './BBDD/historia/historia.component';
+import { BloqueCSSComponent } from './CSS/bloque-css.component';
+import { ObjetosCSSComponent } from './CSS/objetos-css/objetos-css.component';
+import { PrimerComponenteComponent } from './CSS/tarjetas/primer-componente.component';
+import { ScrollComponent } from './CSS/scroll/scroll.component';
+import { CommonModule } from '@angular/common';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatTreeModule } from '@angular/material/tree';
+import { EfectosComponent } from './CSS/efectos/efectos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PrimerComponenteComponent,
-    CurriculumComponent,
     ObjetosCSSComponent,
     ScrollComponent,
+    BloqueCSSComponent,
+    CurriculumComponent,
+    EfectosComponent,
+    HistoriaComponent
   ],
   imports: [
     RouterModule.forRoot(APP_ROUTES),
     BrowserModule,
-    BrowserAnimationsModule,
-    MatSidenavModule,
     MatButtonModule,
     BrowserAnimationsModule,
-    BrowserModule,
-    MatTreeModule,
-    BrowserAnimationsModule,
-    BrowserModule,
     FormsModule,
     HttpClientModule,
     MatNativeDateModule,
     ReactiveFormsModule,
     MatIconModule,
-    MatExpansionModule
+    CommonModule,
+    MatExpansionModule,
+    MatTreeModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

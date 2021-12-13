@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-efectos',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./efectos.component.scss']
 })
 export class EfectosComponent implements OnInit {
-
+  @Input() seleccion: string;
+  
   constructor() { }
 
   ngOnInit(): void {

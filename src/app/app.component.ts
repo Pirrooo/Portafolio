@@ -14,24 +14,15 @@ export class AppComponent {
   panelOpenState = false;
   title = 'PortafolioSegundo';
   showFiller = false;
+  Pantalla: boolean;
 
   constructor(private router: Router) { }
-
-  refresh(comando:string){
-    this.router.navigateByUrl("", { skipLocationChange: true }).then(() => {
-      this.router.navigate([''+comando+'']);
-  }); 
- // console.log(com);
-  //  window.location.reload();
+  ngOnInit(): void {
+    this.Pantalla = true;
   }
 
-  aleatorio(comando:string){
-    let primer =['Perretes', 'Guardamar'];
-    let elige = comando  + (primer[Math.round((Math.random()))]);
-    this.router.navigateByUrl("", { skipLocationChange: true }).then(() => {
-      this.router.navigate([''+elige+'']);
-  }); 
-  console.log(this.showFiller);
+  refresh(comando:boolean){
+    this.Pantalla = comando;
   }
 
   

@@ -1,0 +1,15 @@
+<body>
+    <button class="BotonMenu" mat-flat-button><a href="/">Inicio</a></button>
+	<div class="hero">
+		<h1>Reyes de España</h1>
+	</div>
+	<div class="container">
+		<div *ngFor="let item of ReyesArray" class="evento">
+			<div class="foto" data-aos="fade-up">
+                <h2>{{item.nombre}}</h2>
+                <h2>{{item.apodo}}</h2>
+			</div>
+            <h3 class="fecha">{{item.fecha}}</h3>
+		</div>
+	</div>
+</body>

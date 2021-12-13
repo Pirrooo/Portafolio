@@ -1,5 +1,5 @@
 import { DOCUMENT } from '@angular/common';
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -9,11 +9,12 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ObjetosCSSComponent implements OnInit {
   isUserLoggedIn: boolean;
-  seleccion: string;
-  constructor(private _route: ActivatedRoute, @Inject(DOCUMENT) private document: Document) { }
+  @Input() seleccion: string;
+  constructor() {
+    
+   }
 
   ngOnInit(): void {
-    this.seleccion = this._route.snapshot.paramMap.get('page');
   }
 
 }
