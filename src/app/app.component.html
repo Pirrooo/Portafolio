@@ -1,4 +1,41 @@
-<span *ngIf="Pantalla" class="perretes">
+<section class="Presentacion" *ngIf="Pantalla">
+<body>
+    <section>
+        <header>
+            <a href="#" class="logo">Portafolio</a>
+            <div class="toggleMenu" (click)="toggleMenu()"></div>
+            <ul class="navigation">
+                <li><a routerLink="/" (click)="refresh(true)">Inicio</a></li>
+                <li><a routerLink="BBDD" (click)="refresh(false)">Bases de Datos</a></li>
+                <li><a routerLink="CSS" (click)="refresh(false)">CSS</a></li>
+                <li><a routerLink="Curriculum" (click)="refresh(false)">Curriculum</a></li>
+                <li><a routerLink="/" (click)="refresh(true)">Javascript</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="contentBx">
+                <h2>Hola! soy Ismael<br>
+                    Bienvenido a mi Portal
+                </h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur vero exercitationem obcaecati, reiciendis assumenda tenetur repellendus quo iure? A voluptatem blanditiis temporibus aliquid est rem dolorem quaerat omnis non dolorum ex autem nobis alias reprehenderit, consequatur nisi fuga perferendis vel in nihil porro ea mollitia dignissimos veniam. Amet deserunt 
+                </p>
+                <a href="#">Get Started</a>
+            </div>
+        </div>
+    </section>
+</body>
+</section>
+<router-outlet *ngIf="Pantalla==false"></router-outlet>
+
+
+
+
+
+
+
+
+
+<!--<span *ngIf="Pantalla" class="perretes">
     <a routerLink="/" (click)="refresh(true)">Inicio</a><br>
     <a routerLink="BBDD" (click)="refresh(false)">Bases de Datos</a><br>
     <a routerLink="CSS" (click)="refresh(false)">CSS</a><br>
@@ -7,4 +44,4 @@
 </span>
 
 
-<router-outlet></router-outlet>
+<router-outlet *ngIf="Pantalla==false"></router-outlet>-->
