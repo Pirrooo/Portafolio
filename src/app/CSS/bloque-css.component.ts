@@ -15,23 +15,25 @@ export class BloqueCSSComponent implements OnInit {
 
   constructor(private router: Router) { }
   ngOnInit(): void {
+    let primero = ['ObjetosCSS', "Primer", 'Efectos', 'Scroll'];
+    this.Panel = (primero[Math.round((Math.random() * (primero.length-1)))]);
   }
 
   refresh(comando: string, comando2: string) {
     this.Panel = comando;
     this.seleccion = comando2;
- /*   this.router.navigateByUrl("", { skipLocationChange: true }).then(() => {
-      this.router.navigate(['' + comando2 + '']);
-    });*/
+    /*   this.router.navigateByUrl("", { skipLocationChange: true }).then(() => {
+         this.router.navigate(['' + comando2 + '']);
+       });*/
   }
- 
 
- /* aleatorio(comando: string) {
-    let primer = ['Perretes', 'Guardamar'];
-    let elige = comando + (primer[Math.round((Math.random()))]);
-    this.router.navigateByUrl("", { skipLocationChange: true }).then(() => {
-      this.router.navigate(['' + elige + '']);
-    });
-    console.log(this.showFiller);
-  }*/
+
+  /*  aleatorio(comando: string) {
+      let primer = ['Perretes', 'Guardamar'];
+      let elige = comando + (primer[Math.round((Math.random()))]);
+      this.router.navigateByUrl("", { skipLocationChange: true }).then(() => {
+        this.router.navigate(['' + elige + '']);
+      });
+      console.log(this.showFiller);
+    }*/
 }

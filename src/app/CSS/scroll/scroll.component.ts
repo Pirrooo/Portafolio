@@ -12,7 +12,7 @@ export class ScrollComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    
+    this.seleccion = 'Continuadas'
   }
 
 }

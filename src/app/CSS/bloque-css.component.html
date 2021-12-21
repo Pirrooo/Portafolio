@@ -1,24 +1,24 @@
 <mat-drawer-container class="example-container" autosize>
   <mat-drawer #drawer class="example-sidenav" mode="side">
-
-    <button mat-stroked-button class="NoEscala"><a href="/">Inicio</a></button>
+    <a class="Inicio" href="/">Inicio</a>
     <br>
     <mat-accordion>
       <mat-expansion-panel hideToggle>
         <mat-expansion-panel-header>
           <mat-panel-title>
-            Objetos
+            <b>OBJETOS</b>
           </mat-panel-title>
         </mat-expansion-panel-header>
         <p (click)="refresh('ObjetosCSS', 'Taza')">Taza</p>
         <p (click)="refresh('ObjetosCSS', 'Planetas')">Planetas</p>
+        <p (click)="refresh('ObjetosCSS', 'Libro')">Libro</p>
       </mat-expansion-panel>
 
       <mat-expansion-panel hideToggle>
         <mat-expansion-panel-header>
           <!--<mat-panel-title (click)="aleatorio('/Primer/')">-->
             <mat-panel-title>
-            Cartas
+            CARTAS
           </mat-panel-title>
         </mat-expansion-panel-header>
         <p (click)="refresh('Primer', 'Perretes')">Perretes</p>
@@ -28,7 +28,7 @@
       <mat-expansion-panel hideToggle>
         <mat-expansion-panel-header>
           <mat-panel-title>
-            Imagenes
+            <b>Imagenes</b>
           </mat-panel-title>
         </mat-expansion-panel-header>
         <p (click)="refresh('Efectos', 'Roto')">Grietas</p>

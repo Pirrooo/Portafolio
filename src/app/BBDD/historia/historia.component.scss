@@ -1,15 +1,26 @@
+.Inicio {
+    display: inline-block;
+    margin: 20px 15px;
+    padding: 10px 30px;
+    background: #03a9f4;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-.BotonMenu{
+.BotonMenu {
     margin-top: 20px;
     margin-left: 20px;
     position: absolute;
     z-index: 1;
-  }
+}
 
 body {
     background: #dcdfd9;

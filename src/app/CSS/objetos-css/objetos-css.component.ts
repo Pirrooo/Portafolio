@@ -11,8 +11,8 @@ export class ObjetosCSSComponent implements OnInit {
   isUserLoggedIn: boolean;
   @Input() seleccion: string;
   constructor() {
-    
-   }
+
+  }
 
   ngOnInit(): void {
   }

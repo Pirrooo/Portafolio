@@ -14,6 +14,7 @@ export class PrimerComponenteComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+      this.seleccion = 'Perretes'
   }
 
 }
