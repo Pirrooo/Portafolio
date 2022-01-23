@@ -1,150 +1,188 @@
-.Presentacion {
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Poppins", sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.body{
+    min-height: 100vh;
+    overflow: hidden;
+    background: #fff;
+}
+.cuadros {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+.block {
+    position: relative;
+    width: 5vw;
+    height: 5vw;
+    background: url(src/assets/PuestaDeSol.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  /*  border: 1px solid #111;
+    box-sizing: border-box;*/
+    transform-style: preserve-3d;
+}
+.boton{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border: none;
+    cursor:pointer; 
+    cursor: hand;
+    left: 45%;
+    top: 45%;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+section {
+    //   position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url(src/assets/PuestaDeSol.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 100px;
+}
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo {
+    position: relative;
+    font-size: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+header .navigation {
+    position: relative;
+    display: flex;
+}
+header .navigation li {
+    list-style: none;
+}
+header .navigation li a {
+    display: inline-block;
+    color: #fff;
+    margin-right: 40px;
+    text-decoration: none;
+}
+header .navigation li a:hover {
+    color: #03a9f4;
+}
+.content {
+    max-width: 600px;
+}
+.content .contentBx h2 {
+    font-size: 4em;
+    color: #fff;
+    line-height: 1em;
+}
+.content .contentBx p {
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 300;
+    margin: 20px 0;
+}
+.content .contentBx a {
+    display: inline-block;
+    padding: 10px 30px;
+    background: #03a9f4;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.sci {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+}
+.sci li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sci li a {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    filter: invert(1);
+    transform: scale(0.5);
+}
+@media (max-width: 991px) {
+    header {
+        padding: 15px 40px;
     }
     section {
-     //   position: relative;
-        width: 100%;
-        min-height: 100vh;
+        padding: 40px;
         background: url(src/assets/PuestaDeSol.jpg);
-        background-position: center;
         background-size: cover;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 100px;
-    }
-    header {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 30px 100px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    header .logo {
-        position: relative;
-        font-size: 2em;
-        color: #fff;
-        text-transform: uppercase;
-        font-weight: 700;
-        text-decoration: none;
-        letter-spacing: 1px;
-    }
-    header .navigation {
-        position: relative;
-        display: flex;
-    }
-    header .navigation li {
-        list-style: none;
-    }
-    header .navigation li a {
-        display: inline-block;
-        color: #fff;
-        margin-right: 40px;
-        text-decoration: none;
-    }
-    header .navigation li a:hover {
-        color: #03a9f4;
-    }
-    .content {
-        max-width: 600px;
+        background-position: center;
     }
     .content .contentBx h2 {
-        font-size: 4em;
-        color: #fff;
-        line-height: 1em;
+        font-size: 2.5em;
     }
     .content .contentBx p {
-        font-size: 1.1em;
-        color: #fff;
-        font-weight: 300;
-        margin: 20px 0;
+        font-size: 1em;
     }
-    .content .contentBx a {
-        display: inline-block;
-        padding: 10px 30px;
-        background: #03a9f4;
-        color: #fff;
-        text-decoration: none;
-        font-weight: 500;
-        letter-spacing: 1px;
-    }
-    .sci {
-        position: absolute;
-        bottom: 30px;
-        display: flex;
-    }
-    .sci li {
-        list-style: none;
-        display: flex;
+    header .navigation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #000;
+        z-index: 10;
+        display: none;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
     }
-    .sci li a {
+    header .navigation.active {
+        display: flex;
+    }
+    header .navigation li a {
+        font-size: 24px;
+        margin: 10px 0;
+    }
+    .toggleMenu {
         position: relative;
-        display: inline-block;
-        margin-right: 20px;
-        filter: invert(1);
-        transform: scale(0.5);
+        width: 30px;
+        height: 30px;
+        background: url(src/assets/menu2.png);
+        background-position: center;
+        background-size: 30px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        z-index: 11;
     }
-    @media (max-width: 991px) {
-        header {
-            padding: 15px 40px;
-        }
-        section {
-            padding: 40px;
-            background: url(src/assets/PuestaDeSol.jpg);
-            background-size: cover;
-            background-position: center;
-        }
-        .content .contentBx h2 {
-            font-size: 2.5em;
-        }
-        .content .contentBx p {
-            font-size: 1em;
-        }
-        header .navigation {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: #000;
-            z-index: 10;
-            display: none;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-        header .navigation.active {
-            display: flex;
-        }
-        header .navigation li a {
-            font-size: 24px;
-            margin: 10px 0;
-        }
-        .toggleMenu {
-            position: relative;
-            width: 30px;
-            height: 30px;
-            background: url(src/assets/menu2.png);
-            background-position: center;
-            background-size: 30px;
-            background-repeat: no-repeat;
-            cursor: pointer;
-            z-index: 11;
-        }
-        .toggleMenu.active {
-            background: url(src/assets/close.png);
-            background-position: center;
-            background-size: 25px;
-            background-repeat: no-repeat;
-        }
+    .toggleMenu.active {
+        background: url(src/assets/close.png);
+        background-position: center;
+        background-size: 25px;
+        background-repeat: no-repeat;
     }
 }

@@ -20,6 +20,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTreeModule } from '@angular/material/tree';
 import { EfectosComponent } from './CSS/efectos/efectos.component';
+import anime from 'animejs/lib/anime.es';
 
 @NgModule({
   declarations: [
